@@ -1,0 +1,430 @@
+
+:root {
+    --colorfondo:grey;  /*1*/
+    --fondonav: #000000; /*1*/
+    --fondoLink: #0fb0d3; /*1*/
+    --fondoConciertos: #ffffffad;
+    --letraP: #ffffff;
+    --colorBoton: #0fb0d3; /*1*/
+    --bordeIcono: #000000; /*1*/
+
+    --colorLetraLink: #FFFFFF; /*1*/
+    --letraLinkHover: blue; /*1*/
+    --letraLinkActivo: black; /*1*/
+    --fondoFooter: #000000;
+    --colorLinea: red; /*1*/
+    --colorGaleria: #FFFFFF; /*1*/
+    --colorHistoriaA:#6a72eb; /*1*/
+}
+
+*,
+::before,
+::after{
+    box-sizing: border-box;
+}
+
+/*estilo de letra del body*/
+body{
+    font-family: arial;
+    /*color fondo body*/
+    background: #000000;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to left, #434343, #000000);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to left, #434343, #000000); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        
+}
+
+/*saca margin y padding*/
+ul{
+    margin: 0;
+    padding: 0;
+}
+
+/*saca el estilo a los list-items*/
+li{
+    list-style: none; 
+}
+
+/*saca el subrayado de los link a*/
+a{
+    text-decoration: none; 
+}
+
+
+/* -----------INICIO barra navegacion-------------------*/
+/* color fondo barra entera */
+.navbar{
+    background: var(--fondonav);
+}
+
+/*encabezado menu: logo y botones open y close*/ 
+.navbar-header{
+    /*padding: 1rem;*/
+    display: flex; /*coloca uno al lado del otro*/
+    justify-content: space-between; /*justifica separando logo y botones*/
+    align-items: center; /*centrado de forma vertical y horizontal*/
+    /*border-bottom: 1px solid var(--grey);*/ /*borde botones open y close*/
+}
+/* menu mobile */
+.navbar-menu-mobile{
+    color: var(--colorBoton);/*color de botones open y close*/
+    /*border: 1px solid var(--bordeIcono);*/ /*borde de botones open y close*/
+    /*padding: 6px; para que los botones sean iguales de tamaño*/
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/*tamaño logo*/
+.brand-link img{
+    margin: 5px;
+    width: 150px;
+    max-height: 50%;
+    max-width: 50%;
+}
+/*contenedor menu desplegado con opciones*/
+.navbar-container{
+    position: absolute; /*lo saca de su contenedor*/
+    background: var(--fondoLink); /*color de fondo*/
+    width: 100%;  /*ocupa todo el ancho*/
+    display: flex; /*coloca todas la opciones en un linea una pegada a la otras*/
+    justify-content: space-around; /*separa equitativamente los link a lo largo de su contenedor*/
+    align-items: center; /*centrado de forma vertical y horizontal*/
+    flex-direction: column; /*coloca las opciones menu en columna*/
+    /*height: 300px; *//*le da un alto del menu opciones*/
+    height: 0px; /*oculta menu*/
+    overflow: hidden;
+    transition: height 0.4s ease; /*transicion mas suave al desplegar height(alto) del menu*/
+}
+/*letras link menu */
+.navbar-link{
+    font-size: 1.5rem;
+    color: var(--colorLetraLink);
+}
+/*link menu hover*/
+.navbar-link:hover {
+    color: var(--letraLinkHover);
+}
+/*------------ MENU ACTIVO --------*/
+.navbar-link-active {
+    color: var(--letraLinkActivo);
+}
+/*----deplegar menu con los link al presionar en boton open-------*/
+#navbar-header:target .navbar-container{
+    height: 300px;
+}
+/*---- oculta boton menu desplegar  ----------*/
+#navbar-header:target .open {
+    display: none;
+}
+/*---- oculta boton menu cerrar ----------*/
+#navbar-header:target .close {
+    display: flex;
+}
+/*---- por defecto boton menu cerrar ----------*/
+.close {
+    display: none;
+}
+/* -------------------------FIN barra navegacion-------------------*/
+
+
+
+
+/* -------------------------INICIO INDEX-------------------*/
+/* alinea todo al centro*/
+.fondo {
+    margin: 15px;
+    text-align: center;
+    height: 350px;
+
+}
+.fondo img{
+    width: 550px;
+}
+.texto-bg  {
+    align-items: center;
+    text-align: center;
+}
+
+.texto-bg p {
+    color: var(--letraP);
+    margin: 20px 60px;
+    font-family: 'Franklin Gothic Medium';
+    font-size: 15px;
+}
+/*-----------------------------------FIN-INDEX------------------------------------*/
+
+.linea {
+    border-top: 1px solid var(--colorLinea);
+    height: 2px;
+    max-width: 100%;
+    padding: 10;
+    margin: 20px auto 20px auto;
+}
+
+
+
+
+
+
+/*-----------------------------------INICIO-VIDEOS------------------------------------*/
+.galeria , h2, p{
+    padding-top: 10px;
+    color: var(--colorGaleria);
+    align-items: center;
+    text-align: center;
+}
+
+
+}
+
+.videos iframe{
+    margin: 25px 0 25px 0;
+    width: 250;
+    height: auto;
+
+}
+
+
+/*-----------------------------------FIN-VIDEOS------------------------------------*/
+
+
+
+
+
+/*---------------INICIO conciertos*/
+#conciertos {
+    background: var(--fondoConciertos) ; /* fondo galleria conciertos*/
+    /*display: inline-block;*/
+    max-width: auto;
+    margin: 1rem auto;
+    padding: 0 10px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2), 0 15px 15px -12px rgba(0, 0, 0, 0.35);
+    text-align: center;
+    border-radius: 3px;
+}
+figure#filtro {
+    margin: 0 0 15px;
+    padding: 0;
+    text-align: center;
+    letter-spacing: 10px;
+}
+figure#filtro img {
+    width: 0px;
+    margin: 10px 0 0 0;
+    border-radius: 5px;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.2), 0 15px 15px -12px rgba(0, 0, 0, 0.55);
+    border-top: 1px solid #e0e0e0;
+    -webkit-transition: 1s;
+    transition: 1s;
+}
+
+input#proximo:checked ~ figure img.proximo {
+    width: 550px;
+}
+input#proximo:checked ~ figure img:not(.proximo) {
+    opacity: 0; 
+    position: absolute; 
+    top: 0; 
+    left: 50%;
+} 
+input#limbopub22:checked ~ figure img.limbopub22 {
+    width: 550px;
+}
+input#limbopub22:checked ~ figure img:not(.limbopub22) { 
+    opacity: 0; 
+    position: absolute;  
+    top: 0; 
+    left: 50%;
+} 
+input#clubsocial22:checked ~ figure img.clubsocial22 { 
+    width: 550px;
+}
+input#clubsocial22:checked ~ figure img:not(.clubsocial22) {
+    opacity: 0;  
+    position: absolute;  
+    top: 0; 
+    left: 50%;
+}  
+input#juanlortiz21:checked ~ figure img.juanlortiz21 { 
+    width: 550px; 
+}
+input#juanlortiz21:checked ~ figure img:not(.juanlortiz21) { 
+    opacity: 0;  
+    position: absolute;  
+    top: 0; 
+    left: 50%;
+} 
+input#x:checked ~ figure img { 
+    width:0; 
+    opacity:0; 
+    transition: .5s;
+}
+       
+input[type=radio] { 
+    display: none; 
+}
+label {
+    /*position: relative;*/
+    padding:.5rem;
+    border-radius: 3px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(0,0,0,.1);
+    display: inline-block;
+    margin: 15px 1px 0 0;
+    background: #eee;
+}
+label:hover {
+    cursor: pointer; 
+    background: #e5e5e5; 
+    color: var(--letraLinkHover); 
+    transition: .4s;
+}
+input#x + label {
+    padding:5px; 
+    border-radius: 50%; 
+    background: #eee; 
+    color: #999; 
+    font-size: 1.5rem; 
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.5), 0 5px 8px -4px rgba(0, 0, 0, 0.45) inset; 
+}
+
+input#x + label:hover, input#x:checked + label {
+    background: var(--letraLinkHover); 
+    color: #fff; 
+    transition: .4s;
+}
+input:checked + label { 
+    background: rgba(0, 0, 0, 0.25); 
+    text-shadow: 0 0 1px #222222; 
+    color: #fff; 
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.5), 0 5px 8px -4px rgba(0, 0, 0, 0.45); 
+    border-color: #fff;
+}
+
+/*-----------------------------------FIN-CONCIERTOS------------------------------------*/
+
+
+/*-----------------------------------INICIO-LA BANDA------------------------------------*/
+
+#historia, #integrantes, .nosotros  {
+    align-items: center;
+    text-align: center;
+    color: whitesmoke;
+
+}
+#historia p {
+    font-family: 'Franklin Gothic Medium';
+    color: var(--colorLetraLink );
+    padding: 0 10px 20px 10px;
+}
+#historia a {
+    color: var(--colorHistoriaA);
+    text-decoration: underline;
+}
+.photos-integrantes img{
+    display: block;
+    width: 60%;
+    margin: auto;
+    padding: auto;
+}
+
+.photos-integrantes h3{
+    padding: 40px 0 10px 0;
+}
+
+.photos-integrantes p{
+    display: none;
+    color: #999;
+}
+
+/*-----------------------------------FIN-LA BANDA------------------------------------*/
+
+
+
+/*---- INICIO contactos-----*/
+.link-contactos{
+    color: blue;
+    text-align: center;
+}
+.whatsappLink.desktop{
+    display: none;
+}
+
+
+/*--------------------- inicio  footer ----------------------------*/
+footer {
+    margin-top: 15px;
+    background: var(--fondoFooter);
+}
+
+ul.contacto {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+ul.contacto li {
+    color: #fcfbfb;
+    padding: 5px 30px;
+    font-size: 18px;
+}
+
+ul.contacto li a {
+    padding-right: 16px;
+    color: #fcfbfb;
+    margin-top: 14px;
+}
+
+ul.social_link {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+
+ul.social_link li {
+    display: inline-block;
+    padding-right: 4px;
+    margin: 0px 4px;
+}
+
+ul.social_link li a {
+    font-size: 24px;
+    color: #161616;
+    background: #0fb0d3;
+    border-radius: 80px;
+    display: flex;
+    align-items: center;
+    width: 40px;
+    height: 41px;
+    justify-content: center;
+}
+
+ul.social_link li a:hover {
+    color: #fff;
+}
+
+
+.copyright {
+    padding: 23px 0px;
+    margin-top: 25px;
+    border-top: #ddd solid 1px;
+}
+
+.copyright p {
+    color: #fff;
+    font-size: 18px;
+    line-height: 28px;
+    text-align: center;
+}
+
+.copyright a {
+    color: #fff;
+}
+
+.copyright a:hover {
+    color: #0fb0d3;
+}
+/*--------------------- FIN footer ----------------------------*/
