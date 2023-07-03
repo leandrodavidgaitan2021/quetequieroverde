@@ -344,7 +344,7 @@ input:checked + label {
 
 /*---- INICIO contactos-----*/
 .link-contactos{
-    color: blue;
+    color: green;
     text-align: center;
 }
 .whatsappLink.desktop{
