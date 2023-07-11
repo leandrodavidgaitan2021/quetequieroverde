@@ -33,8 +33,12 @@
 
 
     /*---INICIO index----*/
-    .fondo, .fondo img{
+    .fondo {
         height: 500px;
+    
+    }
+    .fondo img{
+        width: 50%;
     }
     .texto-bg p {
         margin: 20px 90px;
@@ -44,41 +48,7 @@
  
 
 
-    /*----INICIO La Banda----- */  
-    #historia p {
-        padding: 0 50px 20px 60px;
-        font-size: 25px;
-    }
-
-    .photos-integrantes {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        grid-gap: 6px;
-        width: 100%;
-        margin: auto;
-    }
-    .photos-integrantes img{
-        padding: auto;
-    }
-
-    .photos-integrantes p{
-        display: flex;
-        padding: 5px 20px;
-        align-items: center;
-        text-align: center;
-    }
-
-    /*----FIN La Banda----- */  
-
-
-    /*--- INICIO videos youtube*/
-    .videos iframe{
-        margin: 50px 0 50px 0;
-        width: 560px;
-        height: 315px;
-        align-items: center;
-    }
-    /*--- FIN videos youtube*/
+    
 
 
 

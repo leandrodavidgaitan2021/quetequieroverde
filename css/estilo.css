@@ -135,11 +135,9 @@ a{
 .fondo {
     margin: 15px;
     text-align: center;
-    height: 250px;
-
 }
 .fondo img{
-    width: 100%;
+    width: 75%;
 }
 .texto-bg  {
     align-items: center;
