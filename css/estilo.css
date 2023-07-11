@@ -1,15 +1,15 @@
 
 :root {
     --colorfondo:grey;  /*1*/
-    --fondonav: #000000; /*1*/
-    --fondoLink: #24860b; /*1*/
+    --fondonav: #FFFFFF; /*1*/
+    --fondoLink: #44eb1a; /*1*/
     --fondoConciertos: #ffffffad;
     --letraP: #ffffff;
     --colorBoton: #0fb0d3; /*1*/
     --bordeIcono: #000000; /*1*/
 
     --colorLetraLink: #FFFFFF; /*1*/
-    --letraLinkHover: blue; /*1*/
+    --letraLinkHover: rgb(255, 58, 58); /*1*/
     --letraLinkActivo: black; /*1*/
     --fondoFooter: #000000;
     --colorLinea: red; /*1*/
@@ -77,10 +77,10 @@ a{
 }
 /*tamaño logo*/
 .brand-link img{
-    margin: 5px;
-    width: 150px;
+    margin-left: 150px;
     max-height: 50%;
     max-width: 50%;
+
 }
 /*contenedor menu desplegado con opciones*/
 .navbar-container{
