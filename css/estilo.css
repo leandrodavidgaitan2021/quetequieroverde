@@ -175,10 +175,8 @@ a{
 
 
 /*---- INICIO contactos-----*/
-.link-contactos{
-    color: green;
-    text-align: center;
-}
+
+
 .whatsappLink.desktop{
     display: none;
 }

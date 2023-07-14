@@ -67,7 +67,7 @@
         display: none;
     }
     .whatsappLink.desktop{
-        display: inline;
+        display: inline-flex;
     }
     /*----FIN Contacto ---*/
 
