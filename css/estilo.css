@@ -162,6 +162,16 @@ a{
 
 
 
+/*---- fotos -----*/
+
+.imagenes{
+    display: flexbox;
+    width: 50%;
+    margin: auto;
+    padding: auto;
+
+}
+
 
 
 /*---- INICIO contactos-----*/
